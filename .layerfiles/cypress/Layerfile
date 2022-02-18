@@ -23,4 +23,6 @@ EXPOSE WEBSITE http://localhost:9000 /cypress
 
 RUN BACKGROUND npm start
 
-RUN npx cypress run && cd cypress/results && npx mochawesome-merge "*.json" > mochawesome.json && npx marge mochawesome.json
+RUN npx cypress run; echo $?
+
+RUN cd cypress/results && npx mochawesome-merge "*.json" > mochawesome.json && npx marge mochawesome.json
