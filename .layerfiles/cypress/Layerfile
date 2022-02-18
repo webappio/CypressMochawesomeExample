@@ -25,4 +25,4 @@ RUN BACKGROUND npm start
 
 RUN npx cypress run; echo $?
 
-RUN cd cypress/results && npx mochawesome-merge "*.json" > mochawesome.json && npx marge mochawesome.json
+RUN cd cypress && npx mochawesome-merge "results/reports/*.json" > mochawesome.json && npx marge mochawesome.json
