@@ -1,0 +1,29 @@
+{
+  "name": "cypressmochawesomeexample",
+  "version": "1.0.0",
+  "description": "webapp.io Cypress Mochawesome Example",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "cd app && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorMacKenzieLayer/CypressMochawesomeExample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConnorMacKenzieLayer/CypressMochawesomeExample/issues"
+  },
+  "homepage": "https://github.com/ConnorMacKenzieLayer/CypressMochawesomeExample#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
+  }
+}
