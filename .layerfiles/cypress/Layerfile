@@ -10,7 +10,9 @@ RUN npm install -g http-server
 
 RUN npm install mochawesome mochawesome-merge mochawesome-report-generator
 
-COPY . .
+COPY / /root
+
+RUN npm install
 
 RUN BACKGROUND http-server -p 9000
 
