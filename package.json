@@ -5,7 +5,13 @@
   "main": "app/index.js",
   "scripts": {
     "start": "cd app && node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:reports": "rm -R -f cypress/results && mkdir cypress/results && mkdir cypress/results/reports ",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge cypress/results/reports/*.json > cypress/results/report.json",
+    "generate-report": "marge cypress/results/report.json -f report -o cypress/results/ -- inline",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test" : "npm run scripts || npm run posttest"
   },
   "repository": {
     "type": "git",
